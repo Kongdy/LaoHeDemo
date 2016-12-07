@@ -1,0 +1,51 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="base_ripple_style">
+        <item name="rd_enable">true</item>
+        <item name="rd_rippleAnimDuration">200</item>
+        <item name="rd_rippleType">touch</item>
+        <item name="rd_inInterpolator">@android:anim/decelerate_interpolator</item>
+        <item name="rd_outInterpolator">@android:anim/decelerate_interpolator</item>
+        <item name="rd_maskType">rectangle</item>
+        <item name="rd_cornerRadius">4dp</item>
+        <item name="rd_delayClick">untilRelease</item>
+        <item name="rd_backgroundAnimDuration">200</item>
+    </style>
+
+    <!-- 默认涟漪style,green colorPrimaryDark ripple -->
+    <style name="base_ripple_dark_style" parent="@style/base_ripple_style">
+        <item name="rd_rippleColor">@color/colorPrimaryDark</item>
+        <item name="rd_maxRippleRadius">50dp</item>
+    </style>
+
+    <!-- spinner样式 -->
+    <style name="lightSpinnerStyle" parent="Material.Widget.Spinner">
+        <item name="rd_style">@style/base_ripple_dark_style</item>
+        <item name="spn_labelEnable">true</item>
+        <item name="spn_arrowSwitchMode">true</item>
+        <item name="spn_arrowAnimDuration">@android:integer/config_shortAnimTime</item>
+        <item name="spn_arrowInterpolator">@android:anim/decelerate_interpolator</item>
+        <item name="spn_arrowColor">@color/colorPrimary</item>
+        <item name="android:popupBackground">@drawable/abc_popup_background_mtrl_mult</item>
+    </style>
+
+    <style name="base_material_editText_style">
+        <item name="met_floatingLabel">highlight</item>
+        <item name="met_errorColor">@color/red</item>
+        <item name="met_autoValidate">true</item>
+        <item name="met_baseColor">@color/black</item>
+        <item name="android:textColorHint">#454545</item>
+        <item name="met_primaryColor">@color/colorPrimary</item>
+        <item name="met_textColor">@color/text_black</item>
+        <item name="met_checkCharactersCountAtBeginning">true</item>
+        <item name="met_clearButton">true</item>
+    </style>
+</resources>
